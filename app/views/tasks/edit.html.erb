@@ -1,9 +1,8 @@
-<%= simple_form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= check_box_tag(:completed) %>
-  <%= label_tag(:completed, "Task completed") %>
-  <%= link_to f.submit, task_path %>
-<% end %>
+<div class="container">
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>
